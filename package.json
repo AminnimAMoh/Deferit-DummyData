@@ -1,0 +1,22 @@
+{
+  "name": "dummy-data",
+  "version": "1.0.0",
+  "description": "data",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AminnimAMoh/Deferit-DummyData.git"
+  },
+  "author": "Amin Mohammadi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AminnimAMoh/Deferit-DummyData/issues"
+  },
+  "homepage": "https://github.com/AminnimAMoh/Deferit-DummyData#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
