@@ -1,17 +1,17 @@
 const expect = require("chai").expect;
 const assert= require("chai").assert;
-const generateRandomStatus =
-  require("../utilities/GenerateRandomStatus").generateRandomStatus;
+const RecieptsData =
+  require("../utilities/db").RecieptsData;
 
 let res = [];
 const paymentStates = ["processing", "scheduled", "unable to pay", "paid"];
 for (let i = 0; i < 100; i++) {
-  res.push(generateRandomStatus(parseInt(Math.random() * 4)));
+  res.push(new RecieptsData().generateRandomStatus(parseInt(Math.random() * 4)));
 }
 
 describe("Status test", () => {
   it("Should correctly prove in 1 case a random index gain a correct value for status.", () => {
-    expect(generateRandomStatus(3)).to.equal("paid");
+    expect(new RecieptsData().generateRandomStatus(3)).to.equal("paid");
   });
   it("Should correctly prove in 100 cases a random index Will Not Have UNDEFINED return.", () => {
     expect(res).to.not.include.undefined;
