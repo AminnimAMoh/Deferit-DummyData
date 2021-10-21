@@ -19,11 +19,11 @@
   "homepage": "https://github.com/AminnimAMoh/Deferit-DummyData#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "jsonfile": "^6.1.0"
+    "jsonfile": "^6.1.0",
+    "json-server": "^0.17.0"
   },
   "devDependencies": {
     "chai": "^4.3.4",
-    "json-server": "^0.17.0",
     "mocha": "^9.1.3"
   }
 }
