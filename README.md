@@ -29,11 +29,11 @@ npm run start
 yarn start
 ```
 
-Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.
+Open [http://localhost:3001](http://localhost:3001) with your browser to see the [reactive] result.
 
 # or
 
-Open [http://localhost:3001/responce](http://localhost:3001/responce) with your browser to see the [reactive] result.
+Open [http://localhost:3001/responce](http://localhost:3001/responce) with your browser to see the result.
 
 ## Unit testing
 
