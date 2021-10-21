@@ -14,7 +14,12 @@ class RecieptsData {
     this.status = this.generateRandomStatus(parseInt(Math.random() * 4));
     this.amount = this.generateRandomAmount();
     this.img = this.generatePlaceHolderImages();
-    return { date: this.date, status: this.status, amount: this.amount, img: this.img };
+    return {
+      date: this.date,
+      status: this.status,
+      amount: this.amount,
+      img: this.img,
+    };
   }
   generateRandomAmount() {
     return "$" + parseInt(Math.random() * 1000);
@@ -35,13 +40,20 @@ class RecieptsData {
     return paymentStates[index];
   };
   generatePlaceHolderImages() {
+    //These are the image sizes I found usable for receipts.
     // 3x: https://via.placeholder.com/826x1169
     // thumb(15x): https://via.placeholder.com/165x233
-    const backgroundColors = ["061621", "12393D", "E4E5E7", "9C3C41", "5C3B42"];
-    const textColors = ["E4E5E7", "E4E5E7", "061621", "E4E5E7", "E4E5E7"];
+    const backgroundColours = [
+      "061621",
+      "12393D",
+      "E4E5E7",
+      "9C3C41",
+      "5C3B42",
+    ];
+    const textColours = ["E4E5E7", "E4E5E7", "061621", "E4E5E7", "E4E5E7"];
     const randomPick = parseInt(Math.random() * 4);
-    const thumbnail = `https://via.placeholder.com/165x233/${backgroundColors[randomPick]}/${textColors[randomPick]}`;
-    const url = `https://via.placeholder.com/826x1169/${backgroundColors[randomPick]}/${textColors[randomPick]}`;
+    const thumbnail = `https://via.placeholder.com/165x233/${backgroundColours[randomPick]}/${textColours[randomPick]}`;
+    const url = `https://via.placeholder.com/826x1169/${backgroundColours[randomPick]}/${textColours[randomPick]}`;
     return { url: url, thumbnail: thumbnail };
   }
 }

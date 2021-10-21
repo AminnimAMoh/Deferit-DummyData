@@ -4,7 +4,7 @@ const RecieptsData=require("./utilities/db").RecieptsData;
 
 //jsonfile is a library to generate json files.
 const jsonFile = require("jsonfile");
-const output = "responce.json";
+const outputFile = "responce.json";
 
 const port = process.env.PORT || 3001;
 
@@ -14,9 +14,6 @@ for (let i = 0; i < 100; i++) {
   outputData.push(new RecieptsData().populate());
 }
 
-app.get("/reciepts", (req, res) => {
-  res.status(200).send(outputData);
-});
-app.listen(port, () => {
-  console.log(`API Server is Running on ${port}`);
-});
+jsonFile.writeFile(outputFile, outputData, { spaces: 2 }, function (err) {
+    console.log("responce.json is created and populated with the generated data.");
+  });
