@@ -21,7 +21,7 @@ npm install
 yarn
 ```
 
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run start
