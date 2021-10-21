@@ -1,5 +1,4 @@
 const jsonServer= require('json-server');
-
 const responce=require('./responce.json');
 
 const server= jsonServer.create();
