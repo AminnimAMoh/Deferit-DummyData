@@ -18,9 +18,14 @@ class RecieptsData {
   }
   generateRandomDate = (start, end) => {
     //Solution from https://www.codegrepper.com/code-examples/javascript/generate+random+date+in+javascript
-    return new Date(
-      start.getTime() + Math.random() * (end.getTime() - start.getTime())
-    );
+    const date=new Date(
+        start.getTime() + Math.random() * (end.getTime() - start.getTime())
+      );
+    //Converting the date generated to formated string.
+    const stringDate=date.toLocaleString();
+    //Removing the time from the date.
+    const formatDate=stringDate.split(',')[0];
+    return formatDate
   };
   generateRandomStatus = (index) => {
     const paymentStates = ["processing", "scheduled", "unable to pay", "paid"];

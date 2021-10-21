@@ -5,7 +5,7 @@ const RecieptsData =
 
 let res = [];
 const paymentStates = ["processing", "scheduled", "unable to pay", "paid"];
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 100; i++) {
   res.push(new RecieptsData().generateRandomStatus(parseInt(Math.random() * 4)));
 }
 
