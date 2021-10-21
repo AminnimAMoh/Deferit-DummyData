@@ -5,7 +5,7 @@ const RecieptsData =
 
 let res = [];
 const paymentStates = ["processing", "scheduled", "unable to pay", "paid"];
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 10; i++) {
   res.push(new RecieptsData().generateRandomStatus(parseInt(Math.random() * 4)));
 }
 
@@ -18,6 +18,9 @@ describe("Status test", () => {
   });
   it("Should correctly prove in 100 cases a random index Will Not Have EMPTY return.", () => {
     expect(res).to.not.include('');
+  });
+  it("Should correctly prove in 100 cases a random index Will Not Have null return.", () => {
+    expect(res).to.not.include(null);
   });
   it("Should correctly prove in 100 cases a random index Will Not return wrrong value Amin.", () => {
     expect(res).to.not.include('Amin');
@@ -35,6 +38,6 @@ describe("Status test", () => {
     expect(res).to.include("processing");
   });
   it("Should correctly prove in 100 cases incloud all expected values.", () => {
-    expect(res).to.include(paymentStates);
+    expect(res).to.include.members(paymentStates);
   });
 });
