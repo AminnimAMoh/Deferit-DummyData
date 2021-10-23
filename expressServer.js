@@ -39,6 +39,8 @@ function paginatedResponce(model) {
       };
     }
 
+    results.num_found=model.length;
+
     results.responce = model.slice(startIndex, endIndex);
     res.paginatedResults = results;
 
