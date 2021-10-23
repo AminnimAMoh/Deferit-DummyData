@@ -8,8 +8,12 @@ const data=require('./responce.json');
 app.get('/responce', (req,res)=>{
     const page=req.query.page;
     const limit=req.query.limit;
-    console.log(page, limit);
-    res.json(data)
+
+    const startIndex=(page-1)*limit;
+    const endIndex=page*limit;
+
+    const constrainData=data.slice(startIndex, endIndex);
+    res.json(constrainData)
 })
 
 app.listen(port, ()=>{

@@ -3,11 +3,13 @@ class RecieptsData {
   status;
   amount;
   img;
-  constructor() {
+  id;
+  constructor(index) {
     this.date;
     this.status;
     this.amount;
     this.img;
+    this.id=index;
   }
   populate() {
     this.date = this.generateRandomDate(new Date(2012, 0, 1), new Date());
@@ -15,6 +17,7 @@ class RecieptsData {
     this.amount = this.generateRandomAmount();
     this.img = this.generatePlaceHolderImages();
     return {
+      id: this.id,
       date: this.date,
       status: this.status,
       amount: this.amount,
