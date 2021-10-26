@@ -10,7 +10,7 @@ const port = process.env.PORT || 3001;
 
 const outputData = [];
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 1000; i++) {
   outputData.push(new RecieptsData(i).populate());
 }
 

@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
-const data = require("./responce.json");
+const data = require("../responce.json");
 const jsonServer= require('json-server');
 
 const server= jsonServer.create();
